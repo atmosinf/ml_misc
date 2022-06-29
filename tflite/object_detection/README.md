@@ -12,7 +12,7 @@ time the tflite model's invoke method (the invoke method calculated the model pr
 #### filtered_cocodataset_test.ipynb
 examine the filtered coco dataset which was created from coco_filter.py. visualize some images <br>
 
-### in tflite_load_model.ipynb check why inference takes so long for the tflite model (time shown in seconds). the inference time should be ~50 ms
+### in tflite_load_model.ipynb check why inference takes so long for the tflite model (time shown in seconds). the inference time should be ~50 ms (scroll down for findings)
 #### local CPU
 ![1](screenshots/tlocalcpu.jpg)<br><br>
 
@@ -24,3 +24,7 @@ examine the filtered coco dataset which was created from coco_filter.py. visuali
 
 #### colab CPU
 ![4](screenshots/colabcpu.jpg)<br><br>
+
+#### reasons for inference time being slow
+TFLite focuses more on on-device performance. So it is not as optimized when you run it on a x86 machines compared to arm devices for example.
+https://stackoverflow.com/questions/70911977/is-there-any-method-to-decrease-tensorflow-lite-invoke-time-in-c 
