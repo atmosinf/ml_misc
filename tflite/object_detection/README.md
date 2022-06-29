@@ -12,7 +12,7 @@ time the tflite model's invoke method (the invoke method calculated the model pr
 #### filtered_cocodataset_test.ipynb
 examine the filtered coco dataset which was created from coco_filter.py. visualize some images <br>
 
-#### in tflite_load_model.ipynb check why inference takes so long
+### in tflite_load_model.ipynb check why inference takes so long for the tflite model (time shown in seconds). the inference time should be ~50 ms
 #### local CPU
 ![1](screenshots/tlocalcpu.jpg)<br><br>
 
