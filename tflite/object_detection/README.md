@@ -5,6 +5,9 @@ load a model from tfhub using the provided link, get the prediction and visualiz
 load a model from a .tflite file, create an interpreter and predict the output <br>
 time the tflite model's invoke method (the invoke method calculated the model prediction) <br>
 
+#### test_tflite_models.py
+load and test .tflite models <br>
+
 #### coco_filter.py
 1. saves images/annotations from categories <br>
 2. creates new json by filtering the main json file <br>
