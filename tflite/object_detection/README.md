@@ -32,8 +32,8 @@ examine the filtered coco dataset which was created from coco_filter.py. visuali
 ![4](screenshots/colabcpu.jpg)<br><br>
 
 #### convert from tflite to C file 
-![5](screenshots/tflite_convert_Cfile.png)<br><br>
-conversion was done on a linux machine using xxd <br><br>
+![5](screenshots/tflite_convert_Cfile.png)<br>
+conversion was done on a linux machine using xxd <br>
 xxd -i sourcefilename.tflite targetfilename.cc<br><br>
 
 
