@@ -1,5 +1,8 @@
 ## object detection tf
 
+### Note: the .tflite model returns the output in this order: boxes, classes, scores, num_detections. the number of bbox detections per image is 25 for .tflite models.
+### the bboxes are in the format ymin, xmin, ymax, xmax --> corresponds to boxes[0][i][0], boxes[0][i][1], boxes[0][i][2], boxes[0][i][3]
+
 #### tflite_load_model.ipynb
 load a model from tfhub using the provided link, get the prediction and visualize the outputs <br>
 load a model from a .tflite file, create an interpreter and predict the output <br>
@@ -29,5 +32,5 @@ examine the filtered coco dataset which was created from coco_filter.py. visuali
 ![4](screenshots/colabcpu.jpg)<br><br>
 
 #### reasons for inference time being slow
-TFLite focuses more on on-device performance. So it is not as optimized when you run it on a x86 machines compared to arm devices for example.
-https://stackoverflow.com/questions/70911977/is-there-any-method-to-decrease-tensorflow-lite-invoke-time-in-c 
+TFLite focuses more on on-device performance. So it is not as optimized when you run it on a x86 machines compared to arm devices for example. source: https://stackoverflow.com/questions/70911977/is-there-any-method-to-decrease-tensorflow-lite-invoke-time-in-c <br>
+The term inference refers to the process of executing a TensorFlow Lite model **on-device** in order to make predictions based on input data. source: The term inference refers to the process of executing a TensorFlow Lite model on-device in order to make predictions based on input data.  
