@@ -31,6 +31,13 @@ examine the filtered coco dataset which was created from coco_filter.py. visuali
 #### colab CPU
 ![4](screenshots/colabcpu.jpg)<br><br>
 
+#### convert from tflite to C file 
+![5](screenshots/tflite_convert_Cfile.png)<br><br>
+conversion was done on a linux machine using xxd <br><br>
+xxd -i sourcefilename.tflite targetfilename.cc<br><br>
+
+
 #### reasons for inference time being slow
 TFLite focuses more on on-device performance. So it is not as optimized when you run it on a x86 machines compared to arm devices for example. source: https://stackoverflow.com/questions/70911977/is-there-any-method-to-decrease-tensorflow-lite-invoke-time-in-c <br>
 The term inference refers to the process of executing a TensorFlow Lite model **on-device** in order to make predictions based on input data. source: The term inference refers to the process of executing a TensorFlow Lite model on-device in order to make predictions based on input data.  
+
