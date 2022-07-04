@@ -125,6 +125,6 @@ if __name__ == '__main__':
     subset, year = 'val', '2017'  # val - train
     # root_dir = './datasets/COCO'
     root_dir = ''
-    experiment = "my_custom_dataset"
-    categories = ['person', 'elephant', 'zebra', 'giraffe']  # can be multiple categories
+    experiment = "my_custom_dataset1"
+    categories = ['elephant', 'zebra', 'giraffe']  # can be multiple categories
     main(subset, year, root_dir, categories, experiment)

@@ -12,11 +12,19 @@ time the tflite model's invoke method (the invoke method calculated the model pr
 load and test .tflite models <br>
 
 #### coco_filter.py
+code source: https://stackoverflow.com/a/68834777 <br>
 1. saves images/annotations from categories <br>
 2. creates new json by filtering the main json file <br>
 
 #### filtered_cocodataset_test.ipynb
 examine the filtered coco dataset which was created from coco_filter.py. visualize some images <br>
+
+#### my_custom_dataset/coco_2_csv.ipynb
+initial code to convert from the coco format to the csv format as is used by the [tflite model maker](https://www.tensorflow.org/lite/models/modify/model_maker/object_detection).<br>
+
+#### coco_manager (i havent used this at the moment because it doesnt filter and download images, it just filters the annotations)
+github link: https://github.com/immersive-limit/coco-manager <br>
+used to filter the coco dataset to only get a few categories<br>
 
 ### in tflite_load_model.ipynb check why inference takes so long for the tflite model (time shown in seconds). the inference time should be ~50 ms (scroll down for findings)
 #### local CPU
