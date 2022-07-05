@@ -126,5 +126,5 @@ if __name__ == '__main__':
     # root_dir = './datasets/COCO'
     root_dir = ''
     experiment = "my_custom_dataset1"
-    categories = ['elephant', 'zebra', 'giraffe']  # can be multiple categories
+    categories = ['person', 'elephant', 'zebra', 'giraffe']  # can be multiple categories
     main(subset, year, root_dir, categories, experiment)
