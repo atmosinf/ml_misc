@@ -1,3 +1,7 @@
+'''
+returns the precision of the object detection model on one image, given a specific iou_threshold. visualizes the output
+'''
+
 import sys
 import json
 import os
@@ -21,6 +25,8 @@ def get_prediction(model, img_root, img_name):
     filepath = os.path.join(img_root, img_name)
     image = Image.open(filepath)
     imagetensor = tf.convert_to_tensor(image, dtype=tf.uint8, dtype_hint=None, name=None)
+    if len(imagetensor.shape) == 2:
+        imagetensor = tf.image.grayscale_to_rgb(tf.expand_dims(imagetensor, axis=-1, name=None))
     imagetensor_reshaped = tf.expand_dims(imagetensor, axis=0, name=None)
     boxes, scores, classes, num_detections = model(imagetensor_reshaped)
     return boxes, scores, classes, num_detections
