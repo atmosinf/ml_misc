@@ -34,6 +34,9 @@ calculates the mAP for a set of images, given a model and iou thresholds <br>
 ### mAP/mAP_final.py
 calculates the mAP for a set of images, given a model and iou thresholds. the average precision per iou threshold is displayed in the terminal, and finally the mean average precision is shown<br>
 
+### tflite_model_maker
+check the folder for info. (folder contains a detailed readme file) <br>
+
 ### my_custom_dataset/coco_2_csv.ipynb
 initial code to convert from the coco format to the csv format as is used by the [tflite model maker](https://www.tensorflow.org/lite/models/modify/model_maker/object_detection).<br>
 
