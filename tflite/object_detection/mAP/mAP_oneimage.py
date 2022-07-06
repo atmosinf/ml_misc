@@ -280,6 +280,7 @@ def run():
 run()
 
 '''
+instructions:
 to run this file, use this format: 
 python mAP_oneimage.py IMAGENAME.jpg
 change the parameters such as image_root, image_name, confidence_threshold etc in the run() function
