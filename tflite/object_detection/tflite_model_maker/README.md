@@ -9,3 +9,4 @@ the model maker was tested in google colab. i tried to do it on my local windows
 
 * the right path to the csv file was given, and the model was run. everything was kept as it was. only the path to the csv file was changed
 ![2](screenshots/3.jpg) <br>
+![2](screenshots/4.jpg) <br>
