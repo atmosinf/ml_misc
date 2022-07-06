@@ -312,3 +312,9 @@ def run():
     print(f'mAP@{iou_thresh_start:.2f}:{iou_step:.2f}:{iou_thresh_stop:.2f}={mean_avg_prec:.4f}, tested on {image_stopindex-image_startindex} images')
 
 run()
+
+'''
+instructions:
+modify the parameters such as labelidxs, img_root, image_stopindex (to control how many images are taken into account), save and run the .py file
+labelidxs -> which label ids from the ground truth and prediction should be taken into account
+'''
