@@ -20,7 +20,7 @@ code source: https://stackoverflow.com/a/68834777 <br>
 examine the filtered coco dataset which was created from coco_filter.py. visualize some images <br>
 
 #### mAP/compare_ground_truth_bbox_to_predicted_bbox.ipynb 
-**!Note:!** The predictions and visualization works only on the labels we're interested in - in this case they're person, elephant, zebra and giraffe <br>
+**!Note:!** The predictions and visualization works only on the labels we're interested in - in this case they're person, elephant, zebra and giraffe. labelidxs=[0,21,23,24] <br>
 the ground truth bboxes are compared to the predicted bboxes and the mAP is calculated per image for a given confidence threshold and iou threshold <br>
 when calculating map for multiple images, function get_bboxes_classes should be modified such that the first element in the list should have an id unique to each image <br>
 also created a function that visualized the predicted and ground truth bboxes.<br>
