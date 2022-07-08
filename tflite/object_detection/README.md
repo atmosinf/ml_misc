@@ -54,7 +54,7 @@ initial code to convert from the coco format to the csv format as is used by the
 ![4](screenshots/colabcpu.jpg)<br><br>
 
 ### convert from tflite to C file 
-![5](screenshots/tflite_convert_Cfile.png)<br>
+![5](screenshots/tflite_convert_Cfile1.png)<br>
 conversion was done on a linux machine using xxd <br>
 xxd -i sourcefilename.tflite targetfilename.cc<br><br>
 
