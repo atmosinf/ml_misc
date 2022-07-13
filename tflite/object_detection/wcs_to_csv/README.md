@@ -5,7 +5,7 @@ a function was created, which accepts the image url and displays the image with 
 **Note:** <br>
 * the images are accessed directly from the cloud, and is not saved locally
 * the wcs_to_csv function takes a few minutes to run 
-* the first column is always filled with the value 'TRAINING', as we may combine multiple datasets, and split into train, val, test only after that
+* the first column is always filled with the value 'TRAINING' as a placeholder, as we may combine multiple datasets, and split into train, val, test only after that
 
 
 ### created script to convert wcs to csv 

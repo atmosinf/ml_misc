@@ -34,6 +34,10 @@ calculates the mAP for a set of images, given a model and iou thresholds <br>
 ### mAP/mAP_final.py
 calculates the mAP for a set of images, given a model and iou thresholds. the average precision per iou threshold is displayed in the terminal, and finally the mean average precision is shown<br>
 
+### wcs_to_csv
+convert the json data from here - https://lila.science/datasets/wcscameratraps - into a csv format: TRAINING,filepath,category,xmin,ymin,xmax<br>
+contains an .ipynb that creates and tests the functions, and a final .py script <br>
+
 ### tflite_model_maker
 check the folder for info. (folder contains a detailed readme file) <br>
 
