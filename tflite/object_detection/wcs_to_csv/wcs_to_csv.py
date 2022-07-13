@@ -63,7 +63,8 @@ def wcs_to_csv(json_loc,
     
     return finaldf
 
-def viz_wcs(img_file, df):
+def viz_wcs(img_file, csv):
+    df = pd.read_csv(csv)
     url = img_file
     response = requests.get(url)
     img = Image.open(BytesIO(response.content))
@@ -82,6 +83,7 @@ def viz_wcs(img_file, df):
 
     plt.figure(figsize=(15,10))
     plt.imshow(imgnp)
+    plt.show()
 
 def run():
     json_loc = 'wcs_20220205_bboxes_with_classes/wcs_20220205_bboxes_with_classes.json'
@@ -92,6 +94,11 @@ def run():
 
 run()
 
+# run the visualization function after the csv is created
+# viz_wcs('https://lilablobssc.blob.core.windows.net/wcs-unzipped/animals/0204/0531.jpg', 'annotations.csv')
+
+
+
 '''
 use this to convert the json from this link - https://lila.science/datasets/wcscameratraps - to a csv file of this format: 
 TRAINING,path_to_file.jpg,category,xmin,ymin,xmax,ymax 
@@ -99,6 +106,7 @@ instructions:
 in run(), set the source json location, the categories of animals we need to get (this is a filter in list, not filter out).
 put the target filename in df.to_csv
 run the file with: python wcs_to_csv.py
+if you want to visualize an image, create the csv file first, comment the run() function, uncomment the viz_wcs function and pass in the image path and the annotations csv
 Note:
 If you're using locally saved images, in the wsc_to_csv function, for the abs_filepath variable, change the first part so that it matches the local folder hierarchy 
 The first column is always filled with the value 'TRAINING'
