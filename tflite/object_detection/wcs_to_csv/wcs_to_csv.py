@@ -1,4 +1,3 @@
-from email import header
 import json
 import pandas as pd
 from PIL import Image
@@ -92,10 +91,10 @@ def run():
     df.head()
     df.to_csv('annotationsfrompy.csv', index=None)
 
-run()
+# run()
 
 # run the visualization function after the csv is created
-# viz_wcs('https://lilablobssc.blob.core.windows.net/wcs-unzipped/animals/0204/0531.jpg', 'annotations.csv')
+viz_wcs('https://lilablobssc.blob.core.windows.net/wcs-unzipped/animals/0477/0160.jpg', 'annotations.csv')
 
 
 
